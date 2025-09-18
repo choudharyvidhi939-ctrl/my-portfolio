@@ -1,26 +1,25 @@
+// App.js
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Portfolio from "./components/Portfolio";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Portfolio from "./pages/Portfolio";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
-import Profile from "./components/Profile";
-import Contact from "./components/Contact";
 import "./App.css";
 
 function App() {
   return (
     <Router>
-      <div className="app">
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Portfolio />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }

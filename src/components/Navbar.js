@@ -4,11 +4,23 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2 className="logo">MyPortfolio</h2>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+      {/* Left side logo/title */}
+      <div className="logo">My Portfolio</div>
+
+      {/* Right side menu */}
+      <ul className="nav-links">
+        <li>
+          <a href="/" target="_blank" rel="noopener noreferrer">Home</a>
+        </li>
+        <li>
+          <a href="/portfolio" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        </li>
+        <li>
+          <a href="/blog" target="_blank" rel="noopener noreferrer">Blog</a>
+        </li>
+        <li>
+          <a href="/contact" target="_blank" rel="noopener noreferrer">Contact</a>
+        </li>
       </ul>
     </nav>
   );
