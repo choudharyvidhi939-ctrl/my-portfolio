@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Redirect to index.html and preserve the path
+      var path = window.location.pathname;
+      var newUrl = window.location.origin + window.location.pathname.replace(/\/my-portfolio/, "/my-portfolio/index.html");
+      window.location.replace(newUrl);
+    </script>
+  </head>
+  <body>
+    <h1>Redirecting...</h1>
+  </body>
+</html>
